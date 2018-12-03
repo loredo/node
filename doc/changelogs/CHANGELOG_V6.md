@@ -7,6 +7,7 @@
 </tr>
 <tr>
 <td valign="top">
+<a href="#6.15.1">6.15.1</a><br/>
 <a href="#6.15.0">6.15.0</a><br/>
 <a href="#6.14.4">6.14.4</a><br/>
 <a href="#6.14.3">6.14.3</a><br/>
@@ -65,6 +66,17 @@
 **Note:** Node.js v6 is covered by the
 [Node.js Long Term Support Plan](https://github.com/nodejs/LTS) and
 will be supported actively until April 2018 and maintained until April 2019.
+
+<a id="6.15.1"></a>
+## 2018-12-03, Version 6.15.1 'Boron' (LTS), @rvagg
+
+### Notable Changes
+
+This is a patch release to fix a bad backport of the fix for "Slowloris HTTP Denial of Service" (CVE-2018-12122). Node.js 6.15.0 misapplies the headers timeout to the entire keep-alive HTTP session, resulting in prematurely disconnected sockets.
+
+### Commits
+
+* [[`0b9ee5fd6f`](https://github.com/nodejs/node/commit/0b9ee5fd6f)] - **http**: fix backport of Slowloris headers (Matteo Collina)
 
 <a id="6.15.0"></a>
 ## 2018-11-27, Version 6.15.0 'Boron' (LTS), @rvagg
